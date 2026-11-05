@@ -1,0 +1,2 @@
+kind,ip,start,n_attempts,failure_ratio,n_unique_usernames,attempts_per_minute,hour_of_day,is_off_hours,is_rare_ip,score
+brute_force,103.39.34.37,2026-01-29 02:28:07.521231903,1,1.0000,1,1.0000,2,1,1,0.0097

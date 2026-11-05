@@ -1,0 +1,17 @@
+model,attack_type,sessions,session_detection_rate,campaigns,campaign_detection_rate
+Rule (>=5 failures),low_and_slow,1250,0.0000,25.0000,0.0000
+Rule (>=5 failures),distributed,1772,0.0045,6.0000,0.5000
+Rule (>=5 failures),brute_force,62,0.9839,,
+Rule (>=5 failures),credential_stuffing,94,0.9787,,
+Logistic Regression,low_and_slow,1250,0.0000,25.0000,0.0000
+Logistic Regression,distributed,1772,0.0412,6.0000,1.0000
+Logistic Regression,brute_force,62,0.9839,,
+Logistic Regression,credential_stuffing,94,0.9894,,
+Random Forest,low_and_slow,1250,0.0000,25.0000,0.0000
+Random Forest,distributed,1772,0.0293,6.0000,1.0000
+Random Forest,brute_force,62,0.9839,,
+Random Forest,credential_stuffing,94,1.0000,,
+HistGradientBoosting,low_and_slow,1250,0.0000,25.0000,0.0000
+HistGradientBoosting,distributed,1772,0.2099,6.0000,1.0000
+HistGradientBoosting,brute_force,62,0.9839,,
+HistGradientBoosting,credential_stuffing,94,1.0000,,
