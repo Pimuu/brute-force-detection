@@ -1,0 +1,9 @@
+kind,30-min sessions,24-h per-IP windows
+human,0.0037,0.0050
+service,0.0000,0.0000
+stale_device,0.1683,0.0833
+stale_credential,0.0000,
+brute_force,0.9851,1.0000
+credential_stuffing,0.9889,1.0000
+low_and_slow,1.0000,1.0000
+distributed,0.9857,0.9958

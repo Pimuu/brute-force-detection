@@ -1,0 +1,55 @@
+[   1.4s] generated 82,957 login events
+[   3.0s] extracted 13,735 sessions
+[   5.9s] E1 test metrics:
+               model  accuracy  precision  recall     f1  roc_auc  pr_auc    fpr   tn  fp  fn  tp
+ Rule (>=5 failures)    0.9844     0.7650  0.9808 0.8596   0.9979  0.9725 0.0154 3011  47   3 153
+ Logistic Regression    0.9956     0.9277  0.9872 0.9565   0.9998  0.9968 0.0039 3046  12   2 154
+       Random Forest    0.9997     1.0000  0.9936 0.9968   0.9997  0.9967 0.0000 3058   0   1 155
+HistGradientBoosting    0.9997     1.0000  0.9936 0.9968   0.9993  0.9957 0.0000 3058   0   1 155
+[  19.8s] E1 5-fold CV (mean):
+                      accuracy  precision  recall      f1  roc_auc  pr_auc     fpr
+model                                                                             
+Rule (>=5 failures)     0.9848     0.7755  0.9750  0.8628   0.9975  0.9621  0.0147
+Logistic Regression     0.9947     0.9106  0.9904  0.9481   0.9998  0.9970  0.0051
+Random Forest           0.9988     0.9866  0.9885  0.9875   0.9998  0.9984  0.0007
+HistGradientBoosting    0.9993     0.9923  0.9942  0.9933   0.9997  0.9982  0.0004
+[  24.8s] E2 evasion:
+               model         attack_type  sessions  session_detection_rate  campaigns  campaign_detection_rate
+ Rule (>=5 failures)        low_and_slow      1250                  0.0000       25.0                      0.0
+ Rule (>=5 failures)         distributed      1772                  0.0045        6.0                      0.5
+ Rule (>=5 failures)         brute_force        62                  0.9839        NaN                      NaN
+ Rule (>=5 failures) credential_stuffing        94                  0.9787        NaN                      NaN
+ Logistic Regression        low_and_slow      1250                  0.0000       25.0                      0.0
+ Logistic Regression         distributed      1772                  0.0412        6.0                      1.0
+ Logistic Regression         brute_force        62                  0.9839        NaN                      NaN
+ Logistic Regression credential_stuffing        94                  0.9894        NaN                      NaN
+       Random Forest        low_and_slow      1250                  0.0000       25.0                      0.0
+       Random Forest         distributed      1772                  0.0293        6.0                      1.0
+       Random Forest         brute_force        62                  0.9839        NaN                      NaN
+       Random Forest credential_stuffing        94                  1.0000        NaN                      NaN
+HistGradientBoosting        low_and_slow      1250                  0.0000       25.0                      0.0
+HistGradientBoosting         distributed      1772                  0.2099        6.0                      1.0
+HistGradientBoosting         brute_force        62                  0.9839        NaN                      NaN
+HistGradientBoosting credential_stuffing        94                  1.0000        NaN                      NaN
+[  29.6s] E3 window ablation:
+             window  sessions  accuracy  precision  recall     f1  roc_auc  pr_auc    fpr   tn  fp  fn   tp
+    30-min sessions     13735    0.9869     0.9599  0.9906 0.9750   0.9927  0.9690 0.0144 3014  44  10 1053
+24-h per-IP windows      6924    0.9933     0.9694  0.9976 0.9833   0.9970  0.9928 0.0078 1652  13   1  412
+                     30-min sessions  24-h per-IP windows
+kind                                                     
+human                         0.0037               0.0050
+service                       0.0000               0.0000
+stale_device                  0.1683               0.0833
+stale_credential              0.0000                  NaN
+brute_force                   0.9851               1.0000
+credential_stuffing           0.9889               1.0000
+low_and_slow                  1.0000               1.0000
+distributed                   0.9857               0.9958
+[  51.5s] E4 robustness (mean over seeds):
+                      accuracy  precision  recall      f1  roc_auc  pr_auc     fpr
+model                                                                             
+Rule (>=5 failures)     0.9878     0.8136  0.9778  0.8881   0.9980  0.9484  0.0117
+Logistic Regression     0.9965     0.9404  0.9948  0.9665   0.9999  0.9986  0.0034
+Random Forest           0.9987     0.9860  0.9884  0.9872   0.9999  0.9987  0.0007
+HistGradientBoosting    0.9992     0.9910  0.9923  0.9916   0.9998  0.9986  0.0005
+[  53.7s] done - total runtime 53.7s

@@ -1,0 +1,10 @@
+actor,events_eval,events_history,eval_sessions,is_attack
+human,12496,12355,8161,0
+service,6786,6790,1335,0
+stale_device,1729,2110,688,0
+stale_credential,434,0,9,0
+distributed,2270,0,1772,1
+low_and_slow,1250,0,1250,1
+credential_stuffing,16624,0,313,1
+brute_force,20113,0,207,1
+TOTAL,61702,21255,13735,-1

@@ -1,0 +1,7 @@
+kind,Rule (>=5 failures),Logistic Regression,Random Forest,HistGradientBoosting
+brute_force,0.9839,0.9839,0.9839,0.9839
+credential_stuffing,0.9787,0.9894,1.0000,1.0000
+human,0.0110,0.0024,0.0000,0.0000
+service,0.0000,0.0000,0.0000,0.0000
+stale_credential,1.0000,0.0000,0.0000,0.0000
+stale_device,0.0913,0.0288,0.0000,0.0000
